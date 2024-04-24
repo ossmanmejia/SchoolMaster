@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Box, Button } from '@mui/material';
 import styled from 'styled-components';
-import Students from "../assets/students.svg";
+import Students from "../assets/students.png";
 import { LightPurpleButton } from '../components/buttonStyles';
 
 const Homepage = () => {
@@ -15,7 +15,7 @@ const Homepage = () => {
                 <Grid item xs={12} md={6}>
                     <StyledPaper elevation={3}>
                         <StyledTitle>
-                            Bienvenido al
+                            SchoolMaster
                             <br />
                             Sistema de gestión
                             <br />
@@ -32,13 +32,13 @@ const Homepage = () => {
                                     Iniciar sesion
                                 </LightPurpleButton>
                             </StyledLink>
-                            <StyledLink to="/chooseasguest">
+                            {/* <StyledLink to="/chooseasguest">
                                 <Button variant="outlined" fullWidth
                                     sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
                                 >
                                     Iniciar sesión como invitado
                                 </Button>
-                            </StyledLink>
+                            </StyledLink> */}
                             <StyledText>
                                 ¿No tienes una cuenta?{' '}
                                 <Link to="/Adminregister" style={{ color: "#550080" }}>
@@ -78,7 +78,7 @@ const StyledBox = styled(Box)`
 
 const StyledTitle = styled.h1`
   font-size: 3rem;
-  color: #252525;
+  color: #7F56DA;
   /* font-family: "Manrope"; */
   font-weight: bold;
   padding-top: 0;

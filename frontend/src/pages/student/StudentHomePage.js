@@ -58,7 +58,7 @@ const StudentHomePage = () => {
                         <StyledPaper>
                             <img src={Assignment} alt="Assignments" />
                             <Title>
-                                Total Assignments
+                                Total de tareas (En desarrollo)
                             </Title>
                             <Data start={0} end={0} duration={4} />
                         </StyledPaper>

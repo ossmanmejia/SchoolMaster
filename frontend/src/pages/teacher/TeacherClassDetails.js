@@ -26,8 +26,8 @@ const TeacherClassDetails = () => {
     }
 
     const studentColumns = [
-        { id: 'name', label: 'Name', minWidth: 170 },
-        { id: 'rollNum', label: 'Roll Number', minWidth: 100 },
+        { id: 'name', label: 'Nombre', minWidth: 170 },
+        { id: 'rollNum', label: 'Número de la lista', minWidth: 100 },
     ]
 
     const studentRows = sclassStudents.map((student) => {
@@ -39,7 +39,7 @@ const TeacherClassDetails = () => {
     })
 
     const StudentsButtonHaver = ({ row }) => {
-        const options = ['Take Attendance', 'Provide Marks'];
+        const options = ['Tomar asistencia', 'Provide Marks'];
 
         const [open, setOpen] = React.useState(false);
         const anchorRef = React.useRef(null);
