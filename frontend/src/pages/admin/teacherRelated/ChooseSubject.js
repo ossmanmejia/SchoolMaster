@@ -33,7 +33,7 @@ const ChooseSubject = ({ situation }) => {
     }, [situation]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div>Cargando...</div>;
     } else if (response) {
         return <div>
             <h1>Sorry all subjects have teachers assigned already</h1>

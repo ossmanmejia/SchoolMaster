@@ -75,7 +75,7 @@ const ShowNotices = () => {
     return (
         <>
             {loading ?
-                <div>Loading...</div>
+                <div>Cargando...</div>
                 :
                 <>
                     {response ?

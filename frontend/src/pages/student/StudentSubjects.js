@@ -105,7 +105,7 @@ const StudentSubjects = () => {
     return (
         <>
             {loading ? (
-                <div>Loading...</div>
+                <div>Cargando...</div>
             ) : (
                 <div>
                     {subjectMarks && Array.isArray(subjectMarks) && subjectMarks.length > 0

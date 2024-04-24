@@ -86,7 +86,7 @@ const ShowSubjects = () => {
     return (
         <>
             {loading ?
-                <div>Loading...</div>
+                <div>Cargando...</div>
                 :
                 <>
                     {response ?

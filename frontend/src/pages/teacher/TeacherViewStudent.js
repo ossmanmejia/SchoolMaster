@@ -64,20 +64,20 @@ const TeacherViewStudent = () => {
             {loading
                 ?
                 <>
-                    <div>Loading...</div>
+                    <div>Cargando...</div>
                 </>
                 :
                 <div>
-                    Name: {userDetails.name}
+                    Nombre: {userDetails.name}
                     <br />
-                    Roll Number: {userDetails.rollNum}
+                    Número de la lista: {userDetails.rollNum}
                     <br />
-                    Class: {sclassName.sclassName}
+                    Clase: {sclassName.sclassName}
                     <br />
-                    School: {studentSchool.schoolName}
+                    Escuela: {studentSchool.schoolName}
                     <br /><br />
 
-                    <h3>Attendance:</h3>
+                    <h3>Asistencia:</h3>
                     {subjectAttendance && Array.isArray(subjectAttendance) && subjectAttendance.length > 0
                         &&
                         <>
@@ -89,11 +89,11 @@ const TeacherViewStudent = () => {
                                         <Table key={index}>
                                             <TableHead>
                                                 <StyledTableRow>
-                                                    <StyledTableCell>Subject</StyledTableCell>
-                                                    <StyledTableCell>Present</StyledTableCell>
-                                                    <StyledTableCell>Total Sessions</StyledTableCell>
-                                                    <StyledTableCell>Attendance Percentage</StyledTableCell>
-                                                    <StyledTableCell align="center">Actions</StyledTableCell>
+                                                    <StyledTableCell>Asignatura</StyledTableCell>
+                                                    <StyledTableCell>Presente</StyledTableCell>
+                                                    <StyledTableCell>Total de sesiones</StyledTableCell>
+                                                    <StyledTableCell>Porcentaje de asistencia</StyledTableCell>
+                                                    <StyledTableCell align="center">Acciones</StyledTableCell>
                                                 </StyledTableRow>
                                             </TableHead>
 
@@ -114,13 +114,13 @@ const TeacherViewStudent = () => {
                                                         <Collapse in={openStates[subId]} timeout="auto" unmountOnExit>
                                                             <Box sx={{ margin: 1 }}>
                                                                 <Typography variant="h6" gutterBottom component="div">
-                                                                    Attendance Details
+                                                                    Detalle de asistencia
                                                                 </Typography>
                                                                 <Table size="small" aria-label="purchases">
                                                                     <TableHead>
                                                                         <StyledTableRow>
-                                                                            <StyledTableCell>Date</StyledTableCell>
-                                                                            <StyledTableCell align="right">Status</StyledTableCell>
+                                                                            <StyledTableCell>Fecha</StyledTableCell>
+                                                                            <StyledTableCell align="right">Estado</StyledTableCell>
                                                                         </StyledTableRow>
                                                                     </TableHead>
                                                                     <TableBody>
@@ -151,7 +151,7 @@ const TeacherViewStudent = () => {
                                 }
                             })}
                             <div>
-                                Overall Attendance Percentage: {overallAttendancePercentage.toFixed(2)}%
+                                Porcentaje de asistencia general: {overallAttendancePercentage.toFixed(2)}%
                             </div>
 
                             <CustomPieChart data={chartData} />
@@ -166,7 +166,7 @@ const TeacherViewStudent = () => {
                             )
                         }
                     >
-                        Add Attendance
+                        Añadir asistencia
                     </Button>
                     <br /><br /><br />
                     <h3>Subject Marks:</h3>

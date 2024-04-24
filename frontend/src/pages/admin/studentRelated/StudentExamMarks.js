@@ -80,7 +80,7 @@ const StudentExamMarks = ({ situation }) => {
         else if (statestatus === "added") {
             setLoader(false)
             setShowPopup(true)
-            setMessage("Done Successfully")
+            setMessage("Hecho con éxito")
         }
     }, [response, statestatus, error])
 
@@ -89,7 +89,7 @@ const StudentExamMarks = ({ situation }) => {
             {loading
                 ?
                 <>
-                    <div>Loading...</div>
+                    <div>Cargando...</div>
                 </>
                 :
                 <>

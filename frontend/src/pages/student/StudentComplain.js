@@ -38,7 +38,7 @@ const StudentComplain = () => {
         if (status === "added") {
             setLoader(false)
             setShowPopup(true)
-            setMessage("Done Successfully")
+            setMessage("Hecho con éxito")
         }
         else if (error) {
             setLoader(false)

@@ -151,11 +151,11 @@ const ViewStudent = () => {
                     <Table>
                         <TableHead>
                             <StyledTableRow>
-                                <StyledTableCell>Subject</StyledTableCell>
-                                <StyledTableCell>Present</StyledTableCell>
-                                <StyledTableCell>Total Sessions</StyledTableCell>
-                                <StyledTableCell>Attendance Percentage</StyledTableCell>
-                                <StyledTableCell align="center">Actions</StyledTableCell>
+                                <StyledTableCell>Asignatura</StyledTableCell>
+                                <StyledTableCell>Presente</StyledTableCell>
+                                <StyledTableCell>Total de sesiones</StyledTableCell>
+                                <StyledTableCell>Porcentaje de asistencia</StyledTableCell>
+                                <StyledTableCell align="center">Acciones</StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
                         {Object.entries(groupAttendanceBySubject(subjectAttendance)).map(([subName, { present, allData, subId, sessions }], index) => {
@@ -186,13 +186,13 @@ const ViewStudent = () => {
                                             <Collapse in={openStates[subId]} timeout="auto" unmountOnExit>
                                                 <Box sx={{ margin: 1 }}>
                                                     <Typography variant="h6" gutterBottom component="div">
-                                                        Attendance Details
+                                                        Detalle de asistencia
                                                     </Typography>
                                                     <Table size="small" aria-label="purchases">
                                                         <TableHead>
                                                             <StyledTableRow>
-                                                                <StyledTableCell>Date</StyledTableCell>
-                                                                <StyledTableCell align="right">Status</StyledTableCell>
+                                                                <StyledTableCell>Fecha</StyledTableCell>
+                                                                <StyledTableCell align="right">Estado</StyledTableCell>
                                                             </StyledTableRow>
                                                         </TableHead>
                                                         <TableBody>
@@ -220,11 +220,11 @@ const ViewStudent = () => {
                         )}
                     </Table>
                     <div>
-                        Overall Attendance Percentage: {overallAttendancePercentage.toFixed(2)}%
+                        Porcentaje de asistencia general: {overallAttendancePercentage.toFixed(2)}%
                     </div>
                     <Button variant="contained" color="error" startIcon={<DeleteIcon />} onClick={() => removeHandler(studentID, "RemoveStudentAtten")}>Delete All</Button>
                     <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
-                        Add Attendance
+                        Añadir asistencia
                     </Button>
                 </>
             )
@@ -261,7 +261,7 @@ const ViewStudent = () => {
                     </>
                     :
                     <Button variant="contained" sx={styles.styledButton} onClick={() => navigate("/Admin/students/student/attendance/" + studentID)}>
-                        Add Attendance
+                        Añadir asistencia
                     </Button>
                 }
             </>
@@ -401,7 +401,7 @@ const ViewStudent = () => {
             {loading
                 ?
                 <>
-                    <div>Loading...</div>
+                    <div>Cargando...</div>
                 </>
                 :
                 <>

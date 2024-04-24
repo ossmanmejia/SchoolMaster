@@ -81,7 +81,7 @@ const StudentAttendance = ({ situation }) => {
         else if (statestatus === "added") {
             setLoader(false)
             setShowPopup(true)
-            setMessage("Done Successfully")
+            setMessage("Hecho con éxito")
         }
     }, [response, statestatus, error])
 
@@ -90,7 +90,7 @@ const StudentAttendance = ({ situation }) => {
             {loading
                 ?
                 <>
-                    <div>Loading...</div>
+                    <div>Cargando...</div>
                 </>
                 :
                 <>
@@ -112,11 +112,11 @@ const StudentAttendance = ({ situation }) => {
                         >
                             <Stack spacing={1} sx={{ mb: 3 }}>
                                 <Typography variant="h4">
-                                    Student Name: {userDetails.name}
+                                    Nombre del estudiante: {userDetails.name}
                                 </Typography>
                                 {currentUser.teachSubject &&
                                     <Typography variant="h4">
-                                        Subject Name: {currentUser.teachSubject?.subName}
+                                        Nombre de la asignatura: {currentUser.teachSubject?.subName}
                                     </Typography>
                                 }
                             </Stack>
@@ -148,7 +148,7 @@ const StudentAttendance = ({ situation }) => {
                                         </FormControl>
                                     }
                                     <FormControl fullWidth>
-                                        <InputLabel id="demo-simple-select-label">Attendance Status</InputLabel>
+                                        <InputLabel id="demo-simple-select-label">Estado de asistencia</InputLabel>
                                         <Select
                                             labelId="demo-simple-select-label"
                                             id="demo-simple-select"
@@ -157,13 +157,13 @@ const StudentAttendance = ({ situation }) => {
                                             onChange={(event) => setStatus(event.target.value)}
                                             required
                                         >
-                                            <MenuItem value="Present">Present</MenuItem>
-                                            <MenuItem value="Absent">Absent</MenuItem>
+                                            <MenuItem value="Present">Presente</MenuItem>
+                                            <MenuItem value="Absent">Ausente</MenuItem>
                                         </Select>
                                     </FormControl>
                                     <FormControl>
                                         <TextField
-                                            label="Select Date"
+                                            label="Seleccione la fecha"
                                             type="date"
                                             value={date}
                                             onChange={(event) => setDate(event.target.value)} required
@@ -182,7 +182,7 @@ const StudentAttendance = ({ situation }) => {
                                     type="submit"
                                     disabled={loader}
                                 >
-                                    {loader ? <CircularProgress size={24} color="inherit" /> : "Submit"}
+                                    {loader ? <CircularProgress size={24} color="inherit" /> : "Envíar"}
                                 </PurpleButton>
                             </form>
                         </Box>

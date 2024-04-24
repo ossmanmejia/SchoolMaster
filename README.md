@@ -1,5 +1,5 @@
 <h1 align="center">
-    SISTEMA DE GESTIÓN ESCOLAR
+    SchoolMaster - Sistema de gestión escolar
 </h1>
 
 <h3 align="center">
@@ -13,7 +13,7 @@ Accede a registros, revisa calificaciones y comunícate sin esfuerzo.
 
 # Acerca de
 
-El Sistema de Gestión Escolar es una aplicación web construida utilizando la pila MERN (MongoDB, Express.js, React.js, Node.js). Su objetivo es optimizar la gestión escolar, la organización de clases y facilitar la comunicación entre estudiantes, profesores y administradores.
+SchoolMaster es una aplicación web construida utilizando la pila MERN (MongoDB, Express.js, React.js, Node.js). Su objetivo es optimizar la gestión escolar, la organización de clases y facilitar la comunicación entre estudiantes, profesores y administradores.
 
 ## Características
 

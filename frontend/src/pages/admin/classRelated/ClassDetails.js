@@ -252,7 +252,7 @@ const ClassDetails = () => {
     return (
         <>
             {loading ? (
-                <div>Loading...</div>
+                <div>Cargando...</div>
             ) : (
                 <>
                     <Box sx={{ width: '100%', typography: 'body1', }} >

@@ -1,6 +1,9 @@
 const mongoose = require("mongoose")
+// Importa el módulo 'mongoose' para interactuar con la base de datos MongoDB.
 
 const adminSchema = new mongoose.Schema({
+    // Define un esquema para la colección 'admin'.
+
     name: {
         type: String,
         required: true,
@@ -26,3 +29,4 @@ const adminSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("admin", adminSchema)
+// Exporta el modelo 'admin' creado a partir del esquema definido, para que pueda ser utilizado en otras partes de la aplicación.
