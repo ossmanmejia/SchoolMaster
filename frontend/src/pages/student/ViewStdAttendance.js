@@ -65,16 +65,16 @@ const ViewStdAttendance = () => {
         return (
             <>
                 <Typography variant="h4" align="center" gutterBottom>
-                    Attendance
+                    Asistencias
                 </Typography>
                 <Table>
                     <TableHead>
                         <StyledTableRow>
-                            <StyledTableCell>Subject</StyledTableCell>
-                            <StyledTableCell>Present</StyledTableCell>
-                            <StyledTableCell>Total Sessions</StyledTableCell>
-                            <StyledTableCell>Attendance Percentage</StyledTableCell>
-                            <StyledTableCell align="center">Actions</StyledTableCell>
+                            <StyledTableCell>Asignatura</StyledTableCell>
+                            <StyledTableCell>Presente</StyledTableCell>
+                            <StyledTableCell>Total de sesiones</StyledTableCell>
+                            <StyledTableCell>Porcentaje de asistencia</StyledTableCell>
+                            <StyledTableCell align="center">Acciones</StyledTableCell>
                         </StyledTableRow>
                     </TableHead>
                     {Object.entries(attendanceBySubject).map(([subName, { present, allData, subId, sessions }], index) => {
@@ -99,13 +99,13 @@ const ViewStdAttendance = () => {
                                         <Collapse in={openStates[subId]} timeout="auto" unmountOnExit>
                                             <Box sx={{ margin: 1 }}>
                                                 <Typography variant="h6" gutterBottom component="div">
-                                                    Attendance Details
+                                                    Detalles de la asistencia
                                                 </Typography>
                                                 <Table size="small" aria-label="purchases">
                                                     <TableHead>
                                                         <StyledTableRow>
-                                                            <StyledTableCell>Date</StyledTableCell>
-                                                            <StyledTableCell align="right">Status</StyledTableCell>
+                                                            <StyledTableCell>Fecha</StyledTableCell>
+                                                            <StyledTableCell align="right">Estado</StyledTableCell>
                                                         </StyledTableRow>
                                                     </TableHead>
                                                     <TableBody>

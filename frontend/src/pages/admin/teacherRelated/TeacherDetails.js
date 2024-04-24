@@ -33,26 +33,26 @@ const TeacherDetails = () => {
             ) : (
                 <Container>
                     <Typography variant="h4" align="center" gutterBottom>
-                        Teacher Details
+                        Detalles del profesor
                     </Typography>
                     <Typography variant="h6" gutterBottom>
-                        Teacher Name: {teacherDetails?.name}
+                        Nombre del profesor: {teacherDetails?.name}
                     </Typography>
                     <Typography variant="h6" gutterBottom>
-                        Class Name: {teacherDetails?.teachSclass?.sclassName}
+                        Nombre de la clase: {teacherDetails?.teachSclass?.sclassName}
                     </Typography>
                     {isSubjectNamePresent ? (
                         <>
                             <Typography variant="h6" gutterBottom>
-                                Subject Name: {teacherDetails?.teachSubject?.subName}
+                                Nombre de la asignatura: {teacherDetails?.teachSubject?.subName}
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                                Subject Sessions: {teacherDetails?.teachSubject?.sessions}
+                                Cantidad de sesiones de la asignatura: {teacherDetails?.teachSubject?.sessions}
                             </Typography>
                         </>
                     ) : (
                         <Button variant="contained" onClick={handleAddSubject}>
-                            Add Subject
+                            Añadir asignatura
                         </Button>
                     )}
                 </Container>
