@@ -33,7 +33,7 @@ const ShowSubjects = () => {
     const deleteHandler = (deleteID, address) => {
         console.log(deleteID);
         console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
+        setMessage("Lo sentimos la eliminación ha sido deshabilitada por ahora.")
         setShowPopup(true)
 
         // dispatch(deleteUser(deleteID, address))
@@ -43,9 +43,9 @@ const ShowSubjects = () => {
     }
 
     const subjectColumns = [
-        { id: 'subName', label: 'Sub Name', minWidth: 170 },
-        { id: 'sessions', label: 'Sessions', minWidth: 170 },
-        { id: 'sclassName', label: 'Class', minWidth: 170 },
+        { id: 'subName', label: 'Nombre de la asignatura', minWidth: 170 },
+        { id: 'sessions', label: 'Cantidad de sesiones', minWidth: 170 },
+        { id: 'sclassName', label: 'Clase', minWidth: 170 },
     ]
 
     const subjectRows = subjectsList.map((subject) => {
@@ -66,7 +66,7 @@ const ShowSubjects = () => {
                 </IconButton>
                 <BlueButton variant="contained"
                     onClick={() => navigate(`/Admin/subjects/subject/${row.sclassID}/${row.id}`)}>
-                    View
+                    Ver
                 </BlueButton>
             </>
         );
@@ -74,11 +74,11 @@ const ShowSubjects = () => {
 
     const actions = [
         {
-            icon: <PostAddIcon color="primary" />, name: 'Add New Subject',
+            icon: <PostAddIcon color="primary" />, name: 'Añadir nueva asignatura',
             action: () => navigate("/Admin/subjects/chooseclass")
         },
         {
-            icon: <DeleteIcon color="error" />, name: 'Delete All Subjects',
+            icon: <DeleteIcon color="error" />, name: 'Eliminar todas las asignaturas',
             action: () => deleteHandler(currentUser._id, "Subjects")
         }
     ];
@@ -93,7 +93,7 @@ const ShowSubjects = () => {
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                             <GreenButton variant="contained"
                                 onClick={() => navigate("/Admin/subjects/chooseclass")}>
-                                Add Subjects
+                                Añadir asignaturas
                             </GreenButton>
                         </Box>
                         :

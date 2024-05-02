@@ -31,12 +31,12 @@ const ShowTeachers = () => {
     const [message, setMessage] = useState("");
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div>Cargando...</div>;
     } else if (response) {
         return (
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                 <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/chooseclass")}>
-                    Add Teacher
+                    Añadir profesor
                 </GreenButton>
             </Box>
         );
@@ -47,7 +47,7 @@ const ShowTeachers = () => {
     const deleteHandler = (deleteID, address) => {
         console.log(deleteID);
         console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
+        setMessage("Lo sentimos la eliminación ha sido deshabilitada por ahora.")
         setShowPopup(true)
 
         // dispatch(deleteUser(deleteID, address)).then(() => {
@@ -73,11 +73,11 @@ const ShowTeachers = () => {
 
     const actions = [
         {
-            icon: <PersonAddAlt1Icon color="primary" />, name: 'Add New Teacher',
+            icon: <PersonAddAlt1Icon color="primary" />, name: 'Añadir nuevo profesor',
             action: () => navigate("/Admin/teachers/chooseclass")
         },
         {
-            icon: <PersonRemoveIcon color="error" />, name: 'Delete All Teachers',
+            icon: <PersonRemoveIcon color="error" />, name: 'Eliminar todos los profesores',
             action: () => deleteHandler(currentUser._id, "Teachers")
         },
     ];
@@ -98,7 +98,7 @@ const ShowTeachers = () => {
                                 </StyledTableCell>
                             ))}
                             <StyledTableCell align="center">
-                                Actions
+                                Acciones
                             </StyledTableCell>
                         </StyledTableRow>
                     </TableHead>
@@ -120,7 +120,7 @@ const ShowTeachers = () => {
                                                                 onClick={() => {
                                                                     navigate(`/Admin/teachers/choosesubject/${row.teachSclassID}/${row.id}`)
                                                                 }}>
-                                                                Add Subject
+                                                                Añadir asignatura
                                                             </Button>
                                                         )}
                                                     </StyledTableCell>
@@ -138,7 +138,7 @@ const ShowTeachers = () => {
                                             </IconButton>
                                             <BlueButton variant="contained"
                                                 onClick={() => navigate("/Admin/teachers/teacher/" + row.id)}>
-                                                View
+                                                Ver
                                             </BlueButton>
                                         </StyledTableCell>
                                     </StyledTableRow>

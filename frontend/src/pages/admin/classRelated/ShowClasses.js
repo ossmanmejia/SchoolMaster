@@ -39,7 +39,7 @@ const ShowClasses = () => {
   const deleteHandler = (deleteID, address) => {
     console.log(deleteID);
     console.log(address);
-    setMessage("Sorry the delete function has been disabled for now.")
+    setMessage("Lo sentimos la eliminación ha sido deshabilitada por ahora.")
     setShowPopup(true)
     // dispatch(deleteUser(deleteID, address))
     //   .then(() => {
@@ -48,7 +48,7 @@ const ShowClasses = () => {
   }
 
   const sclassColumns = [
-    { id: 'name', label: 'Class Name', minWidth: 170 },
+    { id: 'name', label: 'Nombre de la clase', minWidth: 170 },
   ]
 
   const sclassRows = sclassesList && sclassesList.length > 0 && sclassesList.map((sclass) => {
@@ -60,8 +60,8 @@ const ShowClasses = () => {
 
   const SclassButtonHaver = ({ row }) => {
     const actions = [
-      { icon: <PostAddIcon />, name: 'Add Subjects', action: () => navigate("/Admin/addsubject/" + row.id) },
-      { icon: <PersonAddAlt1Icon />, name: 'Add Student', action: () => navigate("/Admin/class/addstudents/" + row.id) },
+      { icon: <PostAddIcon />, name: 'Añadir asignatura', action: () => navigate("/Admin/addsubject/" + row.id) },
+      { icon: <PersonAddAlt1Icon />, name: 'Añadir estudiante', action: () => navigate("/Admin/class/addstudents/" + row.id) },
     ];
     return (
       <ButtonContainer>
@@ -70,7 +70,7 @@ const ShowClasses = () => {
         </IconButton>
         <BlueButton variant="contained"
           onClick={() => navigate("/Admin/classes/class/" + row.id)}>
-          View
+          Ver
         </BlueButton>
         <ActionMenu actions={actions} />
       </ButtonContainer>
@@ -91,7 +91,7 @@ const ShowClasses = () => {
     return (
       <>
         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-          <Tooltip title="Add Students & Subjects">
+          <Tooltip title="Añadir estudiantes & asignaturas">
             <IconButton
               onClick={handleClick}
               size="small"
@@ -100,7 +100,7 @@ const ShowClasses = () => {
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
             >
-              <h5>Add</h5>
+              <h5>Añadir</h5>
               <SpeedDialIcon />
             </IconButton>
           </Tooltip>
@@ -133,11 +133,11 @@ const ShowClasses = () => {
 
   const actions = [
     {
-      icon: <AddCardIcon color="primary" />, name: 'Add New Class',
+      icon: <AddCardIcon color="primary" />, name: 'Añadir nueva clase',
       action: () => navigate("/Admin/addclass")
     },
     {
-      icon: <DeleteIcon color="error" />, name: 'Delete All Classes',
+      icon: <DeleteIcon color="error" />, name: 'Eliminar las clases',
       action: () => deleteHandler(adminID, "Sclasses")
     },
   ];
@@ -151,7 +151,7 @@ const ShowClasses = () => {
           {getresponse ?
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
               <GreenButton variant="contained" onClick={() => navigate("/Admin/addclass")}>
-                Add Class
+                Añadir clases
               </GreenButton>
             </Box>
             :

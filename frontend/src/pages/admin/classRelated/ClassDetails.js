@@ -84,7 +84,7 @@ const ClassDetails = () => {
                         navigate(`/Admin/class/subject/${classID}/${row.id}`)
                     }}
                 >
-                    View
+                    Ver
                 </BlueButton >
             </>
         );
@@ -110,7 +110,7 @@ const ClassDetails = () => {
                             variant="contained"
                             onClick={() => navigate("/Admin/addsubject/" + classID)}
                         >
-                            Add Subjects
+                            Añadir asignaturas
                         </GreenButton>
                     </Box>
                     :
@@ -150,7 +150,7 @@ const ClassDetails = () => {
                     variant="contained"
                     onClick={() => navigate("/Admin/students/student/" + row.id)}
                 >
-                    View
+                    Ver
                 </BlueButton>
                 <PurpleButton
                     variant="contained"
@@ -185,14 +185,14 @@ const ClassDetails = () => {
                                 variant="contained"
                                 onClick={() => navigate("/Admin/class/addstudents/" + classID)}
                             >
-                                Add Students
+                                Añadir estudiantes
                             </GreenButton>
                         </Box>
                     </>
                 ) : (
                     <>
                         <Typography variant="h5" gutterBottom>
-                            Students List:
+                            Listado de estudiantes:
                         </Typography>
 
                         <TableTemplate buttonHaver={StudentsButtonHaver} columns={studentColumns} rows={studentRows} />
@@ -206,7 +206,7 @@ const ClassDetails = () => {
     const ClassTeachersSection = () => {
         return (
             <>
-                Teachers
+                Profesores
             </>
         )
     }
@@ -234,7 +234,7 @@ const ClassDetails = () => {
                         variant="contained"
                         onClick={() => navigate("/Admin/class/addstudents/" + classID)}
                     >
-                        Add Students
+                        Añadir estudiantes
                     </GreenButton>
                 }
                 {response &&
@@ -242,7 +242,7 @@ const ClassDetails = () => {
                         variant="contained"
                         onClick={() => navigate("/Admin/addsubject/" + classID)}
                     >
-                        Add Subjects
+                        Añadir asignaturas
                     </GreenButton>
                 }
             </>

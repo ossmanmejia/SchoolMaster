@@ -45,7 +45,7 @@ const ShowStudents = () => {
     const deleteHandler = (deleteID, address) => {
         console.log(deleteID);
         console.log(address);
-        setMessage("Sorry the delete function has been disabled for now.")
+        setMessage("Lo sentimos la eliminación ha sido deshabilitada por ahora.")
         setShowPopup(true)
 
         // dispatch(deleteUser(deleteID, address))
@@ -115,7 +115,7 @@ const ShowStudents = () => {
                 </IconButton>
                 <BlueButton variant="contained"
                     onClick={() => navigate("/Admin/students/student/" + row.id)}>
-                    View
+                    Ver
                 </BlueButton>
                 <React.Fragment>
                     <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">
@@ -175,11 +175,11 @@ const ShowStudents = () => {
 
     const actions = [
         {
-            icon: <PersonAddAlt1Icon color="primary" />, name: 'Add New Student',
+            icon: <PersonAddAlt1Icon color="primary" />, name: 'Añadir nuevo estudiante',
             action: () => navigate("/Admin/addstudents")
         },
         {
-            icon: <PersonRemoveIcon color="error" />, name: 'Delete All Students',
+            icon: <PersonRemoveIcon color="error" />, name: 'Eliminar todos los estudiantes',
             action: () => deleteHandler(currentUser._id, "Students")
         },
     ];
@@ -187,13 +187,13 @@ const ShowStudents = () => {
     return (
         <>
             {loading ?
-                <div>Loading...</div>
+                <div>Cargando...</div>
                 :
                 <>
                     {response ?
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                             <GreenButton variant="contained" onClick={() => navigate("/Admin/addstudents")}>
-                                Add Students
+                                Añadir estudiantes
                             </GreenButton>
                         </Box>
                         :

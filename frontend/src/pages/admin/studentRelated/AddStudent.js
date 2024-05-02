@@ -88,9 +88,9 @@ const AddStudent = ({ situation }) => {
         <>
             <div className="register">
                 <form className="registerForm" onSubmit={submitHandler}>
-                    <span className="registerTitle">Add Student</span>
-                    <label>Name</label>
-                    <input className="registerInput" type="text" placeholder="Enter student's name..."
+                    <span className="registerTitle">Añadir estudiante</span>
+                    <label>Nombre</label>
+                    <input className="registerInput" type="text" placeholder="Ingrese el nombre del estudiante..."
                         value={name}
                         onChange={(event) => setName(event.target.value)}
                         autoComplete="name" required />
@@ -98,12 +98,12 @@ const AddStudent = ({ situation }) => {
                     {
                         situation === "Student" &&
                         <>
-                            <label>Class</label>
+                            <label>Clase</label>
                             <select
                                 className="registerInput"
                                 value={className}
                                 onChange={changeHandler} required>
-                                <option value='Select Class'>Select Class</option>
+                                <option value='Select Class'>Seleccione la clase</option>
                                 {sclassesList.map((classItem, index) => (
                                     <option key={index} value={classItem.sclassName}>
                                         {classItem.sclassName}
@@ -113,14 +113,14 @@ const AddStudent = ({ situation }) => {
                         </>
                     }
 
-                    <label>Roll Number</label>
-                    <input className="registerInput" type="number" placeholder="Enter student's Roll Number..."
+                    <label>Número de la lista</label>
+                    <input className="registerInput" type="number" placeholder="Ingrese el número de la lista del estudiante..."
                         value={rollNum}
                         onChange={(event) => setRollNum(event.target.value)}
                         required />
 
-                    <label>Password</label>
-                    <input className="registerInput" type="password" placeholder="Enter student's password..."
+                    <label>Contraseña</label>
+                    <input className="registerInput" type="password" placeholder="Ingrese la contraseña del estudiante..."
                         value={password}
                         onChange={(event) => setPassword(event.target.value)}
                         autoComplete="new-password" required />
@@ -129,7 +129,7 @@ const AddStudent = ({ situation }) => {
                         {loader ? (
                             <CircularProgress size={24} color="inherit" />
                         ) : (
-                            'Add'
+                            'Añadir'
                         )}
                     </button>
                 </form>

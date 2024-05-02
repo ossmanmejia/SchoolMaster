@@ -43,8 +43,8 @@ const ViewSubject = () => {
   };
 
   const studentColumns = [
-    { id: 'rollNum', label: 'Roll No.', minWidth: 100 },
-    { id: 'name', label: 'Name', minWidth: 170 },
+    { id: 'rollNum', label: 'No. Lista', minWidth: 100 },
+    { id: 'name', label: 'Nombre', minWidth: 170 },
   ]
 
   const studentRows = sclassStudents.map((student) => {
@@ -62,7 +62,7 @@ const ViewSubject = () => {
           variant="contained"
           onClick={() => navigate("/Admin/students/student/" + row.id)}
         >
-          View
+          Ver
         </BlueButton>
         <PurpleButton
           variant="contained"
@@ -83,7 +83,7 @@ const ViewSubject = () => {
           variant="contained"
           onClick={() => navigate("/Admin/students/student/" + row.id)}
         >
-          View
+          Ver
         </BlueButton>
         <PurpleButton variant="contained"
           onClick={() => navigate(`/Admin/subject/student/marks/${row.id}/${subjectID}`)}>
@@ -103,14 +103,14 @@ const ViewSubject = () => {
                 variant="contained"
                 onClick={() => navigate("/Admin/class/addstudents/" + classID)}
               >
-                Add Students
+                Añadir estudiantes
               </GreenButton>
             </Box>
           </>
         ) : (
           <>
             <Typography variant="h5" gutterBottom>
-              Students List:
+              Lista de estudiantes:
             </Typography>
 
             {selectedSection === 'attendance' &&
@@ -181,15 +181,15 @@ const ViewSubject = () => {
   return (
     <>
       {subloading ?
-        < div > Loading...</div >
+        < div > Cargando...</div >
         :
         <>
           <Box sx={{ width: '100%', typography: 'body1', }} >
             <TabContext value={value}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <TabList onChange={handleChange} sx={{ position: 'fixed', width: '100%', bgcolor: 'background.paper', zIndex: 1 }}>
-                  <Tab label="Details" value="1" />
-                  <Tab label="Students" value="2" />
+                  <Tab label="Detalles" value="1" />
+                  <Tab label="Estudiantes" value="2" />
                 </TabList>
               </Box>
               <Container sx={{ marginTop: "3rem", marginBottom: "4rem" }}>
