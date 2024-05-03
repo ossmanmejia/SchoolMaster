@@ -70,7 +70,7 @@ const ViewSubject = () => {
             navigate(`/Admin/subject/student/attendance/${row.id}/${subjectID}`)
           }
         >
-          Take Attendance
+          Tomar Asistencia
         </PurpleButton>
       </>
     );

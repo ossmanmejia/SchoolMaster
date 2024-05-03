@@ -56,9 +56,9 @@ const ShowTeachers = () => {
     };
 
     const columns = [
-        { id: 'name', label: 'Name', minWidth: 170 },
-        { id: 'teachSubject', label: 'Subject', minWidth: 100 },
-        { id: 'teachSclass', label: 'Class', minWidth: 170 },
+        { id: 'name', label: 'Nombre', minWidth: 170 },
+        { id: 'teachSubject', label: 'Asignatura', minWidth: 100 },
+        { id: 'teachSclass', label: 'Clase', minWidth: 170 },
     ];
 
     const rows = teachersList.map((teacher) => {

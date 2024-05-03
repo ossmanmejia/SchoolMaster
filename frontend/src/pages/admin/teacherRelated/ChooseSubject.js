@@ -36,11 +36,11 @@ const ChooseSubject = ({ situation }) => {
         return <div>Cargando...</div>;
     } else if (response) {
         return <div>
-            <h1>Sorry all subjects have teachers assigned already</h1>
+            <h1>Lo sentimos, todas las asignaturas tienen profesores asignados</h1>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                 <PurpleButton variant="contained"
                     onClick={() => navigate("/Admin/addsubject/" + classID)}>
-                    Add Subjects
+                    Añadir asignaturas
                 </PurpleButton>
             </Box>
         </div>;
@@ -57,7 +57,7 @@ const ChooseSubject = ({ situation }) => {
     return (
         <Paper sx={{ width: '100%', overflow: 'hidden' }}>
             <Typography variant="h6" gutterBottom component="div">
-                Choose a subject
+                Elegir asignatura
             </Typography>
             <>
                 <TableContainer>
@@ -65,9 +65,9 @@ const ChooseSubject = ({ situation }) => {
                         <TableHead>
                             <StyledTableRow>
                                 <StyledTableCell></StyledTableCell>
-                                <StyledTableCell align="center">Subject Name</StyledTableCell>
-                                <StyledTableCell align="center">Subject Code</StyledTableCell>
-                                <StyledTableCell align="center">Actions</StyledTableCell>
+                                <StyledTableCell align="center">Nombre de la asignatura</StyledTableCell>
+                                <StyledTableCell align="center">Código de la asignatura</StyledTableCell>
+                                <StyledTableCell align="center">Acciones</StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
@@ -82,7 +82,7 @@ const ChooseSubject = ({ situation }) => {
                                         {situation === "Norm" ?
                                             <GreenButton variant="contained"
                                                 onClick={() => navigate("/Admin/teachers/addteacher/" + subject._id)}>
-                                                Choose
+                                                Elegir
                                             </GreenButton>
                                             :
                                             <GreenButton variant="contained" disabled={loader}

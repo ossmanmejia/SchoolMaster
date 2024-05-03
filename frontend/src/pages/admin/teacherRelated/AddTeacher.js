@@ -63,28 +63,28 @@ const AddTeacher = () => {
     <div>
       <div className="register">
         <form className="registerForm" onSubmit={submitHandler}>
-          <span className="registerTitle">Add Teacher</span>
+          <span className="registerTitle">Añadir profesor</span>
           <br />
           <label>
-            Subject : {subjectDetails && subjectDetails.subName}
+            Asignatura : {subjectDetails && subjectDetails.subName}
           </label>
           <label>
-            Class : {subjectDetails && subjectDetails.sclassName && subjectDetails.sclassName.sclassName}
+            Clase : {subjectDetails && subjectDetails.sclassName && subjectDetails.sclassName.sclassName}
           </label>
-          <label>Name</label>
-          <input className="registerInput" type="text" placeholder="Enter teacher's name..."
+          <label>Nombre</label>
+          <input className="registerInput" type="text" placeholder="Ingrese el nombre del profesor..."
             value={name}
             onChange={(event) => setName(event.target.value)}
             autoComplete="name" required />
 
-          <label>Email</label>
-          <input className="registerInput" type="email" placeholder="Enter teacher's email..."
+          <label>Correo electrónico</label>
+          <input className="registerInput" type="email" placeholder="Ingrese el correo del profesor..."
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             autoComplete="email" required />
 
-          <label>Password</label>
-          <input className="registerInput" type="password" placeholder="Enter teacher's password..."
+          <label>Contraseña</label>
+          <input className="registerInput" type="password" placeholder="Ingrese la contraseña del profesor..."
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             autoComplete="new-password" required />
@@ -93,7 +93,7 @@ const AddTeacher = () => {
             {loader ? (
               <CircularProgress size={24} color="inherit" />
             ) : (
-              'Register'
+              'Registrar'
             )}
           </button>
         </form>

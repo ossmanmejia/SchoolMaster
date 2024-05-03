@@ -70,7 +70,7 @@ const ShowStudents = () => {
     })
 
     const StudentButtonHaver = ({ row }) => {
-        const options = ['Take Attendance', 'Provide Marks'];
+        const options = ['Tomar asistencia', 'Calificaciones (En desarrollo)'];
 
         const [open, setOpen] = React.useState(false);
         const anchorRef = React.useRef(null);
