@@ -113,7 +113,7 @@ const ShowStudents = () => {
                 <IconButton onClick={() => deleteHandler(row.id, "Student")}>
                     <PersonRemoveIcon color="error" />
                 </IconButton>
-                <BlueButton variant="contained"
+                <BlueButton variant="contained" style={{ marginRight: '4px' }}
                     onClick={() => navigate("/Admin/students/student/" + row.id)}>
                     Ver
                 </BlueButton>

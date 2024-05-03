@@ -39,7 +39,7 @@ const TeacherClassDetails = () => {
     })
 
     const StudentsButtonHaver = ({ row }) => {
-        const options = ['Tomar asistencia', 'Provide Marks'];
+        const options = ['Tomar asistencia', 'Calificaciones (En desarrollo)'];
 
         const [open, setOpen] = React.useState(false);
         const anchorRef = React.useRef(null);
@@ -80,12 +80,12 @@ const TeacherClassDetails = () => {
         return (
             <>
                 <BlueButton
-                    variant="contained"
+                    variant="contained" style={{ marginRight: '4px' }}
                     onClick={() =>
                         navigate("/Teacher/class/student/" + row.id)
                     }
                 >
-                    View
+                    Ver
                 </BlueButton>
                 <React.Fragment>
                     <ButtonGroup variant="contained" ref={anchorRef} aria-label="split button">

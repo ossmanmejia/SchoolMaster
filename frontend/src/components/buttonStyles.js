@@ -41,7 +41,7 @@ export const DarkRedButton = styled(Button)`
 
 export const BlueButton = styled(Button)`
   && {
-    background-color: #080a43;
+    background-color: #7F56DA;
     color: #fff;
     &:hover {
       background-color: #0a1e82;

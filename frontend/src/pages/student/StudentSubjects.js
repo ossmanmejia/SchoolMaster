@@ -117,12 +117,12 @@ const StudentSubjects = () => {
                             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
                                 <BottomNavigation value={selectedSection} onChange={handleSectionChange} showLabels>
                                     <BottomNavigationAction
-                                        label="Table"
+                                        label="Tabla"
                                         value="table"
                                         icon={selectedSection === 'table' ? <TableChartIcon /> : <TableChartOutlinedIcon />}
                                     />
                                     <BottomNavigationAction
-                                        label="Chart"
+                                        label="Gráfico"
                                         value="chart"
                                         icon={selectedSection === 'chart' ? <InsertChartIcon /> : <InsertChartOutlinedIcon />}
                                     />

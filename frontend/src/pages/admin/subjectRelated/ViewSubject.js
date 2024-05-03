@@ -59,7 +59,7 @@ const ViewSubject = () => {
     return (
       <>
         <BlueButton
-          variant="contained"
+          variant="contained" style={{ marginRight: '4px' }}
           onClick={() => navigate("/Admin/students/student/" + row.id)}
         >
           Ver
@@ -87,7 +87,7 @@ const ViewSubject = () => {
         </BlueButton>
         <PurpleButton variant="contained"
           onClick={() => navigate(`/Admin/subject/student/marks/${row.id}/${subjectID}`)}>
-          Provide Marks
+          Calificaciones (en desarrollo)
         </PurpleButton>
       </>
     );

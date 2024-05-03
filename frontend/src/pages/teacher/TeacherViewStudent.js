@@ -105,7 +105,7 @@ const TeacherViewStudent = () => {
                                                     <StyledTableCell>{subjectAttendancePercentage}%</StyledTableCell>
                                                     <StyledTableCell align="center">
                                                         <Button variant="contained" onClick={() => handleOpen(subId)}>
-                                                            {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
+                                                            {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Detalles
                                                         </Button>
                                                     </StyledTableCell>
                                                 </StyledTableRow>
@@ -169,7 +169,7 @@ const TeacherViewStudent = () => {
                         Añadir asistencia
                     </Button>
                     <br /><br /><br />
-                    <h3>Subject Marks:</h3>
+                    {/* <h3>Subject Marks:</h3> */}
 
                     {subjectMarks && Array.isArray(subjectMarks) && subjectMarks.length > 0 &&
                         <>
@@ -199,13 +199,13 @@ const TeacherViewStudent = () => {
                             })}
                         </>
                     }
-                    <PurpleButton variant="contained"
+                    {/*  <PurpleButton variant="contained"
                         onClick={() =>
                             navigate(
                                 `/Teacher/class/student/marks/${studentID}/${teachSubjectID}`
                             )}>
                         Add Marks
-                    </PurpleButton>
+                    </PurpleButton> */}
                     <br /><br /><br />
                 </div>
             }

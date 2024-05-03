@@ -147,7 +147,7 @@ const ViewStudent = () => {
         const renderTableSection = () => {
             return (
                 <>
-                    <h3>Attendance:</h3>
+                    <h3>Asistencia:</h3>
                     <Table>
                         <TableHead>
                             <StyledTableRow>
@@ -170,14 +170,14 @@ const ViewStudent = () => {
                                         <StyledTableCell align="center">
                                             <Button variant="contained"
                                                 onClick={() => handleOpen(subId)}>
-                                                {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Details
+                                                {openStates[subId] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}Detalles
                                             </Button>
                                             <IconButton onClick={() => removeSubAttendance(subId)}>
                                                 <DeleteIcon color="error" />
                                             </IconButton>
                                             <Button variant="contained" sx={styles.attendanceButton}
                                                 onClick={() => navigate(`/Admin/subject/student/attendance/${studentID}/${subId}`)}>
-                                                Change
+                                                Cambiar
                                             </Button>
                                         </StyledTableCell>
                                     </StyledTableRow>
@@ -247,12 +247,12 @@ const ViewStudent = () => {
                         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
                             <BottomNavigation value={selectedSection} onChange={handleSectionChange} showLabels>
                                 <BottomNavigationAction
-                                    label="Table"
+                                    label="Tabla"
                                     value="table"
                                     icon={selectedSection === 'table' ? <TableChartIcon /> : <TableChartOutlinedIcon />}
                                 />
                                 <BottomNavigationAction
-                                    label="Chart"
+                                    label="Gráfico"
                                     value="chart"
                                     icon={selectedSection === 'chart' ? <InsertChartIcon /> : <InsertChartOutlinedIcon />}
                                 />
@@ -318,12 +318,12 @@ const ViewStudent = () => {
                         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
                             <BottomNavigation value={selectedSection} onChange={handleSectionChange} showLabels>
                                 <BottomNavigationAction
-                                    label="Table"
+                                    label="Tabla"
                                     value="table"
                                     icon={selectedSection === 'table' ? <TableChartIcon /> : <TableChartOutlinedIcon />}
                                 />
                                 <BottomNavigationAction
-                                    label="Chart"
+                                    label="Gráfico"
                                     value="chart"
                                     icon={selectedSection === 'chart' ? <InsertChartIcon /> : <InsertChartOutlinedIcon />}
                                 />
@@ -409,9 +409,9 @@ const ViewStudent = () => {
                         <TabContext value={value}>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                                 <TabList onChange={handleChange} sx={{ position: 'fixed', width: '100%', bgcolor: 'background.paper', zIndex: 1 }}>
-                                    <Tab label="Details" value="1" />
-                                    <Tab label="Attendance" value="2" />
-                                    <Tab label="Marks" value="3" />
+                                    <Tab label="Detalles" value="1" />
+                                    <Tab label="Asistencia" value="2" />
+                                    <Tab label="Calificaciones" value="3" />
                                 </TabList>
                             </Box>
                             <Container sx={{ marginTop: "3rem", marginBottom: "4rem" }}>

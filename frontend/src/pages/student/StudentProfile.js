@@ -62,32 +62,32 @@ const StudentProfile = () => {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
-                  <strong>Fecha de nacimiento:</strong> Funcionalidad en construcción
+                  <strong>Fecha de nacimiento:</strong> (En desarrollo)
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
-                  <strong>Género:</strong> Funcionalidad en construcción
+                  <strong>Género:</strong> (En desarrollo)
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
-                  <strong>Correo electrónico:</strong> Funcionalidad en construcción
+                  <strong>Correo electrónico:</strong> (En desarrollo)
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
-                  <strong>Teléfono:</strong> Funcionalidad en construcción
+                  <strong>Teléfono:</strong> (En desarrollo)
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
-                  <strong>Dirección:</strong> Funcionalidad en construcción
+                  <strong>Dirección:</strong> (En desarrollo)
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <Typography variant="subtitle1" component="p">
-                  <strong>Contacto de emergencia:</strong> Funcionalidad en construcción
+                  <strong>Contacto de emergencia:</strong> (En desarrollo)
                 </Typography>
               </Grid>
             </Grid>

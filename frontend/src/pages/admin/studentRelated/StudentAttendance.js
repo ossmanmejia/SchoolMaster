@@ -125,12 +125,12 @@ const StudentAttendance = ({ situation }) => {
                                     {
                                         situation === "Student" &&
                                         <FormControl fullWidth>
-                                            <InputLabel id="demo-simple-select-label">Select Subject</InputLabel>
+                                            <InputLabel id="demo-simple-select-label">Seleccione la asignatura</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
                                                 value={subjectName}
-                                                label="Choose an option"
+                                                label="Seleccione una opción"
                                                 onChange={changeHandler} required
                                             >
                                                 {subjectsList ?
@@ -141,7 +141,7 @@ const StudentAttendance = ({ situation }) => {
                                                     ))
                                                     :
                                                     <MenuItem value="Select Subject">
-                                                        Add Subjects For Attendance
+                                                        Agregar asignaturas para la asistencia
                                                     </MenuItem>
                                                 }
                                             </Select>
@@ -153,7 +153,7 @@ const StudentAttendance = ({ situation }) => {
                                             labelId="demo-simple-select-label"
                                             id="demo-simple-select"
                                             value={status}
-                                            label="Choose an option"
+                                            label="Seleccione una opción"
                                             onChange={(event) => setStatus(event.target.value)}
                                             required
                                         >
